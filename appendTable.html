@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Appending to Tables</title>
+		<link rel="stylesheet" style type="text/css" href="style.css">
+		
+	</head>
+	<body>
+		<!-- 
+			add a new row and two columns to a table
+			Use text inputs to fill the table data			
+		-->
+		
+		<table id="myTable" border="1">
+			<tr>
+				
+				<td>Clifford</td>
+				<td>Harris</td>
+				
+			</tr>
+		</table><br>
+		
+		 	What Is Your First Name? <br>
+			<input type="text" id="fname"><br>
+			
+			What Is Your Last Name? <br>
+			<input type="text" id="lname"><br>
+			
+			<input type="button" onclick="addName()" value="Submit Your Name">		
+		
+		
+		
+		<script type="text/javascript">
+			
+					
+			function addName(){
+				
+				var table = document.getElementById("myTable");
+				var row = table.insertRow(1);
+				var cell1 = row.insertCell(0);
+				var cell2 = row.insertCell(1);
+				
+				cell1.innerHTML = document.getElementById('fname').value;
+				cell2.innerHTML = document.getElementById('lname').value;
+
+			}
+			
+				
+				
+		</script>
+		
+	</body>
+</html>
